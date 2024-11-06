@@ -1,0 +1,7 @@
+server:
+  port: 8188
+spring:
+  application:
+    name: spring-oauth2
+  profiles:
+    active: h2

@@ -1,0 +1,4 @@
+package org.example.springoauth2.service;
+
+public class CustomUserDetailsService {
+}

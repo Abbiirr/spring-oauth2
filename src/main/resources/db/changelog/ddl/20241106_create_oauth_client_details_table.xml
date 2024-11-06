@@ -1,0 +1,46 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="20241106_create_oauth_client_details_table" author="Abbiirr">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="oauth_client_details"/>
+            </not>
+        </preConditions>
+        <createTable tableName="oauth_client_details">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="registration_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="client_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="client_secret" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="redirect_uri" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authorization_grant_type" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="scope" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="provider" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authorization_uri" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="token_uri" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

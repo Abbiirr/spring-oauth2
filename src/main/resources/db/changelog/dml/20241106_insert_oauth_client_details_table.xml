@@ -1,0 +1,20 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="20241106_insert_oauth_client_details_table" author="Abbiir">
+        <insert tableName="oauth_client_details">
+            <column name="registration_id" value="google"/>
+            <column name="client_id" value="dummy-client-id"/>
+            <column name="client_secret" value="dummy-client-secret"/>
+            <column name="redirect_uri" value="http://localhost:8080/login/oauth2/code/google"/>
+            <column name="authorization_grant_type" value="authorization_code"/>
+            <column name="scope" value="profile,email"/>
+            <column name="provider" value="https://accounts.google.com"/>
+            <column name="authorization_uri" value="https://accounts.google.com/o/oauth2/auth"/>
+            <column name="token_uri" value="https://oauth2.googleapis.com/token"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
