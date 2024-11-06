@@ -45,7 +45,7 @@ public class SecurityConfig {
         ;
 
         http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
-        http.csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**", "/api/logout")); // Exclude API from CSRF protection
+        http.csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**", "/logout")); // Exclude API from CSRF protection
 
 
         return http.build();

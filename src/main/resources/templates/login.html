@@ -7,26 +7,32 @@
         body {
             background-color: #f8f9fa;
         }
+
         .navbar {
             background-color: #81c784;
         }
+
         .navbar-brand {
             color: white !important;
         }
+
         .container {
             margin-top: 100px;
         }
+
         .card {
             border: none;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .card-header {
             background-color: #81c784;
             color: white;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
+
         .btn-custom {
             background-color: #81c784;
             color: white;
@@ -34,6 +40,7 @@
             width: 100%;
             margin-top: 10px;
         }
+
         .btn-custom:hover {
             background-color: #66bb6a;
             color: white;
@@ -45,6 +52,10 @@
     <a class="navbar-brand" href="#">My App</a>
 </nav>
 <div class="container">
+    <div th:if="${param.logout}" class="alert alert-success text-center">
+        You have been logged out successfully.
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card">

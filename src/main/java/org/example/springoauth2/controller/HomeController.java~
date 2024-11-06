@@ -49,4 +49,9 @@ public class HomeController {
         return "login";
     }
 
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        new SecurityContextLogoutHandler().logout(request, response, null); // Trigger logout
+        return "You have been logged out successfully!";
+    }
 }

@@ -1,0 +1,4 @@
+package org.example.springoauth2.controller;
+
+public class LogoutController {
+}
